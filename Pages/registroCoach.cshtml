@@ -1,0 +1,48 @@
+﻿@page
+
+
+    <div class="container mt-5">
+        <div class="card shadow p-4">
+            <h2 class="text-center mb-4">Registro de Entrenador</h2>
+
+            <form id="formCoach">
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre completo:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="especialidad" class="form-label">Especialidad:</label>
+                    <input type="text" class="form-control" id="especialidad" name="especialidad" placeholder="Hipertrofia, pérdida de peso, etc.">
+                </div>
+
+                <div class="mb-3">
+                    <label for="experiencia" class="form-label">Años de experiencia:</label>
+                    <input type="number" class="form-control" id="experiencia" name="experiencia" min="0">
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Descripción:</label>
+                    <textarea class="form-control" id="descripcion" name="descripcion" rows="4"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="foto" class="form-label">Foto de perfil (opcional):</label>
+                    <input type="file" class="form-control" id="foto" name="foto">
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success">Enviar solicitud</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="~/js/paginaCoach.js"></script>

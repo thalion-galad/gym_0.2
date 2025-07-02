@@ -1,0 +1,72 @@
+/* === GENERAL === */
+body {
+    background-color: #1e1e1e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* === HEADER === */
+header {
+    text-align: center;
+    background-color: #111;
+    padding: 20px;
+    border-bottom: 4px solid #fca311;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+    header h1 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 3rem;
+        color: #fca311;
+        margin-bottom: 5px;
+    }
+
+    header h3 {
+        font-family: 'Bebas Neue', sans-serif;
+        color: #f2f2f2;
+        margin-top: 5px;
+    }
+
+    header img {
+        margin-top: 10px;
+        width: 100px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #fca31155;
+    }
+
+/* === NAVBAR === */
+nav {
+    background-color: #232323;
+    border-bottom: 2px solid #fca311;
+    border-radius: 0 0 10px 10px;
+}
+
+.nav-tabs .nav-link {
+    color: #f2f2f2;
+    font-weight: normal;
+}
+
+    .nav-tabs .nav-link:hover {
+        color: #fca311 !important;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #fca311 !important;
+        background-color: #2a2a2a !important;
+    }
+
+/* === FOOTER === */
+footer {
+    background-color: #111;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid #fca311;
+}
+
+    footer a:hover {
+        color: #fca311 !important;
+    }

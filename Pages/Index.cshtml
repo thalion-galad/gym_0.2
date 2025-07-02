@@ -1,0 +1,75 @@
+﻿@page
+
+@{
+    ViewData["Title"] = "Plan Fitnes";
+}
+
+@section styles {
+  
+<link rel="stylesheet" href="~/css/paginaPrincipal.css">
+}
+
+    <div class="contenido-central">
+        <article id="cuerpo">
+            <h3 class="titulo-central">CALCULADORA NUTRICIONAL</h3>
+            <div class="contenedor-doble-columna">
+                <div class="columna-formulario">
+                    <h4 class="subtitulo-columna">Ingresa tus Datos</h4>
+                    <form id="formCal" action="">
+                        <label for="peso">Peso (kg): </label>
+                        <input type="number" id="peso" />
+                        <label for="altura">Altura (cm): </label>
+                        <input type="number" id="altura" />
+                        <label for="edad">Edad (años):</label>
+                        <input type="number" id="edad">
+
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo">
+                            <option value="" disabled selected>Selecciona tu sexo</option>
+                            <option value="M">Hombre</option>
+                            <option value="F">Mujer</option>
+                            <option value="jisas">Jesús Salas Ramos</option>
+                        </select>
+
+                        <label for="actividad">Nivel de actividad física:</label>
+                        <select id="actividad">
+                            <option value="" disabled selected>Selecciona tu nivel de actividad</option>
+                            <option value="sede">Sedentario (Poco o nada de ejercicio)</option>
+                            <option value="lacti">Ligeramente Activo (1-3 días por semana)</option>
+                            <option value="acti">Activo (3-5 días por semana)</option>
+                            <option value="muyac">Muy activo (6-7 días por semana)</option>
+                        </select>
+
+                        <label for="objetivo">Objetivo:</label>
+                        <select id="objetivo">
+                            <option value="" disabled selected>Selecciona tu objetivo</option>
+                            <option value="mp">Mantener peso</option>
+                            <option value="pg">Perder Grasa</option>
+                            <option value="am">Aumentar masa muscular</option>
+                        </select>
+
+                        <button type="button" onclick="calcularProte()">CALCULAR</button>
+                        <div id="alerta"></div>
+                    </form>
+                </div>
+
+                <div class="columna-resultados" id="respuestas">
+                    <h4 class="subtitulo-columna">Tus Resultados</h4>
+                    <h3>Proteínas en gramos a consumir por día:</h3>
+                    <label for="maxProt">Máximo:</label> <input type="text" id="maxProt">
+                    <label for="minProt">Mínimo:</label> <input type="text" id="minProt">
+
+                    <h3>Calorías en gramos a consumir por día:</h3>
+                    <label for="maxCal">Máximo:</label> <input type="text" id="maxCal">
+                    <label for="minCal">Mínimo:</label> <input type="text" id="minCal">
+                </div>
+
+            </div>
+        </article>
+    </div>
+
+@section scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="~/js/paginaPrincipal.js"></script>
+
+}

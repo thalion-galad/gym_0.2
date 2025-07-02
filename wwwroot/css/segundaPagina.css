@@ -1,0 +1,23 @@
+﻿
+
+.rating {
+    color: #ccc;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+    .rating .fas {
+        transition: color 0.2s;
+    }
+
+        .rating .fas.active {
+            color: #ffc107;
+        }
+
+#mapa {
+    height: 300px;
+    width: 300px;
+}
+#tarjeta{
+    margin-bottom:20px;
+}

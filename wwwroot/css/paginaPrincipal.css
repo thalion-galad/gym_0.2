@@ -1,0 +1,103 @@
+﻿/* === GENERAL STYLES === */
+
+/* === MAIN CONTENT LAYOUT === */
+.contenido-central {
+    max-width: 1000px;
+    margin: 0 auto; /* Centra el contenido en la página */
+    padding: 0 20px;
+}
+
+.contenedor-doble-columna {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Permite que las columnas se apilen en pantallas pequeñas */
+    margin-top: 20px;
+}
+
+.columna-formulario,
+.columna-resultados {
+    flex: 1; /* Permite que las columnas crezcan para ocupar el espacio */
+    min-width: 300px; /* Asegura que no se hagan demasiado pequeñas */
+}
+
+/* === MAIN ARTICLE BODY === */
+#cuerpo {
+    background-color: #2a2a2a;
+    padding: 30px 40px;
+    margin-top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 2px #D98324;
+}
+
+/* === FORM STYLES === */
+/* Agrupa estilos de inputs y selects para evitar duplicidad */
+#formCal input,
+#formCal select,
+#respuestas input {
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#respuestas h3 {
+    font-size: 1.2rem; /* Puedes ajustar este valor para el tamaño que desees */
+    margin-bottom: 5px; /* Reduce el espacio inferior */
+}
+
+#formCal input:focus,
+#formCal select:focus {
+    outline: none;
+    background-color: #555;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+#respuestas label {
+    margin-top: 10px;
+}
+
+/* === BUTTON === */
+button {
+    background-color: #D98324;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    button:hover {
+        background-color: #f29b3b; /* Cambiado a un tono más claro para el hover */
+        transform: scale(1.05);
+    }
+
+/* === TITLES & ALERTS === */
+h3 {
+    color: #D98324;
+}
+
+.titulo-central {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+#alerta {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 470px;
+    text-align: center;
+}
