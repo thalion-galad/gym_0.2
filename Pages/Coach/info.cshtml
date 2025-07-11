@@ -1,0 +1,34 @@
+﻿@page "{nombre}"
+@model Pages.Coach.InfoModel
+@{
+    ViewData["Title"] = "Información del Coach";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="~/css/infoCoach.css" />
+}
+
+<main class="container mt-4">
+    <h1>@Model.Coach.Nombre</h1>
+    <p><strong>Especialidad:</strong> @Model.Coach.Especialidad</p>
+    <p><strong>Años de experiencia:</strong> @Model.Coach.Experiencia</p>
+    <p><strong>Descripción:</strong> @Model.Coach.Descripcion</p>
+
+    <div id="mapa" class="mt-4" style="height:300px; width:100%;"></div>
+</main>
+
+@section Scripts {
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var map = L.map('mapa').setView([0, 0], 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            // Aquí podrías centrar según @Model.Coach y Lon si tuvieras datos reales
+            L.marker([0,0]).addTo(map).bindPopup('@Model.Coach.Nombre').openPopup();
+        });
+    </script>
+    <script src="~/js/inf"></script>
+}

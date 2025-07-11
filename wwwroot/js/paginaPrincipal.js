@@ -45,5 +45,6 @@
     }
     document.getElementById("maxProt").value = peso * 2.2;
     document.getElementById("minProt").value = peso * 1.6;
+    
 
 }
