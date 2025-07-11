@@ -1,0 +1,36 @@
+﻿@page "{nombre}"
+@model Pages.Coach.InfoModel
+@{
+    ViewData["Title"] = "Información del Coach";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="~/css/infoCoach.css" />
+}
+
+<main class="container mt-4">
+    <h1>@Model.Coach.Nombre</h1>
+    <p><strong>Especialidad:</strong> @Model.Coach.Especialidad</p>
+    <p><strong>Años de experiencia:</strong> @Model.Coach.Experiencia</p>
+    <p><strong>Descripción:</strong> @Model.Coach.Descripcion</p>
+
+    <div id="mapa" class="mt-4" style="height:300px; width:100%;"></div>
+</main>
+
+@section Scripts {
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lat = @Model.Coach.Latitud.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            var lon = @Model.Coach.Longitud.ToString(System.Globalization.CultureInfo.InvariantCulture);
+
+            var map = L.map('mapa').setView([lat, lon], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            L.marker([lat, lon]).addTo(map).bindPopup('@Model.Coach.Nombre').openPopup();
+        });
+    </script>
+    <script src="~/js/inf.js"></script> <!-- solo si necesitas lógica adicional -->
+}
